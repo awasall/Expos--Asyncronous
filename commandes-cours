@@ -1,0 +1,3 @@
+git clone https://lktechnologie@bitbucket.org/m1gl/cours-servlet.git
+
+mvn clean && mvn tomcat7:redeploy

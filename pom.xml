@@ -36,7 +36,7 @@
                 <version>2.2</version>
 
                 <configuration>
-                    <path>/m1gl</path>
+                    <path>/m1Test</path>
                     <url>http://localhost:8080/manager/text</url>
                     <username>mven</username>
                     <password>mven</password>

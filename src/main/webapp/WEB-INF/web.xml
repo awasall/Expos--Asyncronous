@@ -8,6 +8,7 @@
     <servlet>
         <servlet-name>ExempleServlet</servlet-name>
         <servlet-class>sn.isi.ExempleServlet</servlet-class>
+        <async-supported>true</async-supported>
     </servlet>
 
     <servlet-mapping>
@@ -18,4 +19,5 @@
         <servlet-name>ExempleServlet</servlet-name>
         <url-pattern>/simple</url-pattern>
     </servlet-mapping>
+
 </web-app>

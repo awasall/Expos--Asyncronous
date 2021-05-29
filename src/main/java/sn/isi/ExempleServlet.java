@@ -19,6 +19,10 @@ public class ExempleServlet extends HttpServlet {
                          HttpServletResponse response) throws ServletException, IOException {
 
         final long startTime = System.nanoTime();
+      // request.startAsync () signalera au conteneur que le traitement
+        // de la requête en cours est maintenant asynchrone, c'est-à-dire.
+        // la réponse ne doit pas être validée
+        // - ni envoyée au client - lorsque l' exécution de la méthode doGet () se termine.
         final AsyncContext asyncContext = request.startAsync(request, response);
 
         new Thread() {
@@ -41,14 +45,14 @@ public class ExempleServlet extends HttpServlet {
                 }
             }
         }.start();
-        try {
-            Thread.sleep(3000);
+        /*try {
+           // Thread.sleep(3000);
             response.getWriter().println("test1");
             //System.out.println("Test console");
 
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
 
     }
